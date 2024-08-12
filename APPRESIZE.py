@@ -75,7 +75,7 @@ def resize_and_reposition_xbox_app(x, y, width, height):
     except Exception as e:
         print(f"An error occurred: {e}")
 
-time.sleep(15)  # Pause the program for 15 seconds before running the rest
+time.sleep(1)  # Pause the program for 15 seconds before running the rest
 x_position = 1100
 y_position = 25
 width = 800
