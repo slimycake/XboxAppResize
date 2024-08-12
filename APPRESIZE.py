@@ -30,15 +30,15 @@ def check_for_updates():
     except requests.exceptions.RequestException as e:
         print(f"Failed to check for updates: {e}")
 
-def update_script(url):
+def update_script():
+    print("Update available. Starting the updater.")
     try:
-        response = requests.get(url)
-        with open(sys.argv[0], 'w', encoding='utf-8') as file:
-            file.write(response.text)
-        print("Script updated successfully. Please restart the application.")
-        sys.exit()
-    except Exception as e:
-        print(f"Failed to update the script: {e}")
+        # Exit the current application
+        sys.exit("Exiting for update...")
+    except SystemExit as e:
+        # Start the updater script
+        subprocess.run([sys.executable, "updater.py"], check=True)
+
 
 if not is_admin():
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
