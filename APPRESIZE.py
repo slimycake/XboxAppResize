@@ -5,7 +5,7 @@ import os
 import requests
 import time
 
-CURRENT_VERSION = "1.2"
+CURRENT_VERSION = "1.3"
 
 def is_admin():
     try:
