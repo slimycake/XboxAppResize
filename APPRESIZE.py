@@ -37,7 +37,7 @@ def update_script():
         sys.exit("Exiting for update...")
     except SystemExit as e:
         # Start the updater script
-        subprocess.run([sys.executable, "updater.py"], check=True)
+        subprocess.run([sys.executable, "updater.exe"], check=True)
 
 
 if not is_admin():
