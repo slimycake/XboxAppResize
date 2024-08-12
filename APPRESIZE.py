@@ -9,12 +9,12 @@ def is_admin():
     except:
         return False
 
-##def install(package):
+def install(package):
     ##subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
-# Check and install necessary packages
-##install("pygetwindow")
-##install("pyautogui")
+
+install("pygetwindow")
+install("pyautogui")
 
 if not is_admin():
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
