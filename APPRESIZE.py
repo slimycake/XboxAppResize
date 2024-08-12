@@ -13,8 +13,8 @@ def is_admin():
     except:
         return False
 
-def install(package):
-    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+##def install(package):
+    ##subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 def check_for_updates():
     script_url = "https://raw.githubusercontent.com/slimycake/XboxAppResize/main/APPRESIZE.py"
@@ -47,8 +47,8 @@ if not is_admin():
 check_for_updates()  # Check for updates at the start of the program
 
 # Check and install necessary packages
-install("pygetwindow")
-install("pyautogui")
+##install("pygetwindow")
+##install("pyautogui")
 
 import pygetwindow as gw
 import pyautogui
