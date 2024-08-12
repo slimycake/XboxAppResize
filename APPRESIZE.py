@@ -17,8 +17,8 @@ def install(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 def check_for_updates():
-    script_url = "https://raw.githubusercontent.com/slimycake/XboxAppResize/main/APPRESIZE.py?token=GHSAT0AAAAAACVHIUEM7JZ4MB6F7XQ5GQ5YZVZTQFA"
-    version_url = "https://raw.githubusercontent.com/slimycake/XboxAppResize/main/version.txt?token=GHSAT0AAAAAACVHIUENZJATEJVM3YODXK52ZVZTSVQ"
+    script_url = "https://raw.githubusercontent.com/slimycake/XboxAppResize/main/APPRESIZE.py"
+    version_url = "https://raw.githubusercontent.com/slimycake/XboxAppResize/main/version.txt"
     try:
         response = requests.get(version_url)
         latest_version = response.text.strip()
